@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+
+<heading>
+    <meta charset="utf-8">
+    <link href="myStyle.css" rel="stylesheet" type="text/css">
+    <Title>Test JavaScript.</Title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" />
+</heading>
+
+<body onLoad="ShowDate()" id="body">
+    <img src="201705-S__38846544.jpg" width=240 height=120 alt="My Test Image">
+    <p>My test<strong> image.</strong></p>
+    <ol>
+        <li>Tiger</li>
+        <li>Cat</li>
+        <li>Rabbit</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=DIVfDZZeGxM&t=6s">You Tube</a>
+    <link href="myStyle.css" rel="stylesheet" type="text/css">
+    <div class="header">
+        <h3 id="heading">My JavaScript.</h3>
+        <p>With Tiger</p>
+    </div>
+    <div class="container">
+        <Form method="Post" action="something.php" name="myFrom" onsubmit="validateForm()">
+            <div>
+                <Label>First Name</Label>
+                <input type="text" name="firstName" id="firstName" />
+            </div>
+            <br />
+            <div>
+                <Label>Last Name</Label>
+                <input type="text" name="lastName" id="lastName" />
+            </div>
+            <br />
+            <div>
+                <Label>Background</Label>
+                <select name="background" id="background" onchange="changeBackground(this)">
+                    <option value="white">White</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+            </div>
+            <br />
+            <input type="submit" value="submit" />
+            <h1 id="Time"></h1>
+        </Form>
+    </div>
+    <Script>
+    function validateForm() {
+        var firstName = document.forms["myForm"]["firstName"].value;
+        if (firstName == null || firstName == "") {
+            alert("firstName is required");
+            return false;
+        }
+        if (firstName.length < 3) {
+            alert("firstName must be at least 3 chars.");
+            return false;
+        }
+
+    }
+    
+
+    function changeBackground(x) {
+        //var body=document.getElementById('body');
+        //body.style.backgroundColor = x.value;
+        var heading = document.getElementById('heading');
+        heading.style.color = x.value;
+
+    }
+
+    function ShowDate() {
+        var time = document.getElementById('Time');
+        time.innerHTML = Date();
+
+    }
+
+    function ClearDate() {
+        var time = document.getElementById('Time');
+        time.innerHTML = "";
+
+    }
+
+    function doClick() {
+
+        alert('You Clicked');
+    }
+    console.log(123);
+    var num1 = '30';
+    var num2 = '50';
+    var Test = "This is case sentesive";
+    var test = "鍾坤泰";
+    var colors = ['Red', 'Green', 'Blue'];
+    //alert(num1+num2+colors);
+    //alert(test+' :'+colors[1]);
+    </Script>
+    <script src="Scripts/main.js"></script>
+    
+</body>
+<footer>
+    <script src="js.js"></script>
+    <script src="scripts/main.js"></script>
+</footer>
+
+</html>

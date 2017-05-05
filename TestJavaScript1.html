@@ -1,0 +1,48 @@
+<html>
+
+<header>
+
+  <Title>Test JavaScript.</Title>
+  <link rel="stylesheet" href="style.css" />
+</header>
+<body onLoad = "ShowDate()">
+<p>Test</p>
+<div class="header">
+    <h1>My JavaScript.</h1>
+    <p>With Tiger</p>
+
+</div>
+<div class = "container">
+
+<button onClick = "doClick()" onMouseOver="ShowDate()" onMouseOut="ClearDate()">Click me</button>
+<h1 id="Time"></h1>
+
+</div>
+<Script>
+  function ShowDate(){
+    var time=document.getElementById('Time');
+    time.innerHTML=Date();
+
+  }
+  function ClearDate(){
+    var time=document.getElementById('Time');
+    time.innerHTML="";
+
+  }
+  function doClick(){
+
+    alert('You Clicked');
+  }
+  console.log(123);
+  var num1='30';
+  var num2='50';
+  var Test = "This is case sentesive";
+  var test = "鍾坤泰";
+  var colors=['Red','Green','Blue'];
+  //alert(num1+num2+colors);
+  //alert(test+' :'+colors[1]);
+</Script>  
+
+</body>
+
+</html>
